@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=3.0">
+<title></title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript">
+function show()
+{
+
+window.open("signpage.html")
+}
+function dis()
+{
+            var email=document.getElementById("email").value;
+            var pw=document.getElementById("pw").value;
+            if(email=="fargintech@gmail.com" && pw=="fargintech@123")
+            {
+            window.open("fargintopbar.html");
+            }
+            else{
+            alert("login failure");
+            }
+}
+
+
+</script>
+<style type="text/css">
+#list
+{
+position: absolute;
+display: none;
+}
+#link:hover #list
+{
+position: fixed;
+display: block;
+}
+#link1:hover #list
+{
+position: fixed;
+display: block;
+}
+.container1
+{
+display: flex;
+justify-content: flex-end;
+margin-top: 2%;
+margin-right: 7%;
+color: black;
+
+
+
+}
+
+#link
+{
+    position: fixed;
+margin-right: 2%;
+}
+
+#name
+{
+position: fixed;
+           margin-right: 80%;
+           color: black;
+}
+a
+{
+text-decoration: none;
+font-weight: bold;
+color: black
+}
+
+body
+{
+background-image: url("https://images.pexels.com/photos/792199/pexels-photo-792199.jpeg");
+background-repeat: no-repeat;
+                         background-position: center right;
+                         background-size: cover;
+             background-attachment: fixed;  
+                         height:100%;
+
+
+
+        }
+        #content
+        {
+        position: fixed;
+        text-align: center;
+        font-size: 50px;
+        color: black;
+        top: 30%;
+        left: 32%;
+        font-family: 'Poppins', sans-serif;
+        }
+*{
+margin: 0;
+padding: 0;
+outline: none;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+}
+body
+{
+height: 100vh;
+width: 100%;
+
+
+
+}
+.show-btn
+{
+background: black;
+padding: 10px 20px;
+font-size: 20px;
+font-weight: 500;
+color: #3498db;
+cursor: pointer;
+box-shadow: 0px 0px 10px rgpa(0,0,0,0.1);
+}
+
+.show-btn, .container
+{
+
+position: fixed;
+top: 55%;
+left: 50%;
+transform: translate(-50%, -50%);
+border: none;
+border-radius: 20px;
+box-shadow: 2px 2px  solid black;
+}
+input[type="checkbox"]{
+display: none;
+}
+
+.container{
+display: none;
+background: #fff;
+width: 40%;
+height: auto;
+padding: 30px;
+box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+#show:checked ~ .container
+{
+display: block;
+}
+.container .close-btn
+{
+         position: absolute;
+         right: 20px;
+         top: 15px;
+         font-size: 18px;
+         cursor: pointer;
+}
+.container .close-btn:hover{
+color: #3498db;
+}
+.container .text{
+font-size: 35px;
+font-weight: 600;
+text-align: center;
+}
+.container form{
+margin-top: -20px;
+}
+.container form .data{
+height: 45px;
+width: 100%;
+margin: 40px 0;
+}
+form .data label{
+font-size: 18px;
+}
+form .data input{
+height: 100%;
+width: 100%;
+padding-left: 10px;
+font-size: 17px;
+border: 1px solid lightgrey;
+}
+form .data input:focus{
+border-color: #3498db;
+border-bottom-width: 2px;
+}
+form .forgot.pass{
+margin-top: -8px;
+}
+form .forgot-pass a{
+color: #3498db;
+text-decoration: none;
+}
+form .forgot-pass a:hover
+{
+          text-decoration: underline;
+}
+form .btn{
+margin: 30px 0;
+height: 45px;
+width: 100%;
+position: relative;
+overflow: hidden;
+}
+form .btn .inner{
+          height: 100%;
+          width: 300%;
+          position: absolute;
+          left: -100%;
+          z-index: -1;
+          transition: all 0.4s;
+          background-color: -webkit-linear-gradient(blue);
+}
+form .btn:hover .inner{
+left: 0;
+}
+form .btn button{
+height: 100%;
+width: 100%;
+background: none;
+border: none;
+color: black;
+font-size: 18px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+
+}
+form .signup-link{
+text-align: center;
+
+}
+form .signup-link a
+{
+color: #3498db;
+text-decoration: none;
+}
+form .signup-link a:hover{
+text-decoration: underline;
+}
+</style>
+</head>
+<body>
+<header>
+
+<div class="container1">
+
+<b id="name">Fargintech</b>
+<div id="link">
+<a href="">Help&Support</a>
+
+</div>
+
+</div>
+<div id="content">
+<b>Welcome to Fargintech</b><br>
+<b>Let's Explore</b>
+</div>
+
+
+</header>
+
+<div class="center">
+<input type="checkbox" id="show">
+<label for="show" class="show-btn">Login</label>
+<div class="container">
+<label for="show" class="close-btn fa fa-times"></label>
+<div class="text">Login</div>
+<form action="#">
+<div class="data">
+
+<input id="email" type="text" placeholder="Email or phone" required>
+</div>
+<div class="data">
+
+<input id="pw" type="password" placeholder="password" required>
+</div>
+<div class="forgot-pass"><a href="#">Forgot Password? </a></div>
+<div class="btn">
+<div class="inner"></div>
+<button id="but1" type="submit" onclick="dis()">login</button>
+</div>
+<div class="signup-link">Not a member?<a href="#" onclick="show()">Signup now</a></div>
+</form>
+</div>
+</div>
+</body>
+</html>
